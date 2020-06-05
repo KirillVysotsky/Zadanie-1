@@ -1,0 +1,52 @@
+using System;
+
+namespace lab1
+{
+    public class Lib1
+    {
+        public string stpow(string a, int b)
+        {
+            string vys = " ";
+
+            for (int i = 0; i < b; i++)
+            {
+                vys += a;
+            }
+            return vys;
+        }
+
+        public string rev(string a)
+        {
+            string vys1 = "";
+
+            for (int i = a.Length - 1; i >= 0; i--)
+            {
+                vys1 += a[i];
+            }
+            return vys1;
+        }
+
+        public string remov(string str, string s)
+        {
+            return str.Replace(s, "");
+        }
+
+        public int leng(string str)
+        {
+            return str.Length;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Lib1 k = new Lib1();
+
+            Console.WriteLine(k.stpow("he-he ", 6));
+            Console.WriteLine(k.rev("123456"));
+            Console.WriteLine(k.remov("123456", "456"));
+            Console.WriteLine(k.leng("rtrtrtvrfgvrgbvgr"));
+        }
+    }
+}
